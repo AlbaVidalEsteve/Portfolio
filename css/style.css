@@ -1,5 +1,14 @@
 @charset "utf-8";
 
+/* 
+TODO: padding theme mode
+TODO: CENTRAR SKILLS
+    Todo: Añadir skills
+TODO: añadir proyectos
+TODO: Canviar layout?
+TODO: Arrelgar github svg color
+
+*/
 *{
     margin: 0;
     padding: 0;
@@ -7,9 +16,11 @@
 }
 
 :root{
-    font: 16px/1.5 Roboto, sans-serif;
+    font: 16px/1.5 Ubuntu, sans-serif;
     scroll-behavior: smooth;
+    /* --primary-color:#48a9ff; */
     --primary-color:#457eb0;
+
     --matisse-100: #e7eff7;
     --matisse-200: #cbdcec;
     --matisse-300: #9dbfdc;
@@ -21,19 +32,15 @@
     --nav-mobile: #f2f2f2b3;
     --nav-tablet: #9dbfdcbb; 
 }
-
+/* General Presets */
 h1, h2, h3, h4{
-    font-family: 'Roboto Slab', serif;
-}
- h2{
-    color: var(--primary-color);
+    font-family: 'Share Tech Mono', serif;
 }
 
 a{
     text-decoration: none;
     color: var(--font-color);
 }
-
 li{
     list-style-type: none;
 }
@@ -50,19 +57,12 @@ body{
     font-size: 1.2rem;
     display: flex;
     flex-direction: column; 
-    /* display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 8vh 1fr 10vh 8vh;
-    grid-template-areas: 
-        "principal"
-        "pie"
-        "cabecera";  */
-    font: 16px/1.5rem 'Roboto', sans-serif;
+    font: 16px/1.5rem 'Ubuntu', sans-serif;
     word-spacing: 10%;
     background-color: var(--bg-color);
 }
 
-/** Header style */
+/** Navigation style */
 header{
     & p{
         display: none;
@@ -94,18 +94,6 @@ header nav{
         color: var(--primary-color);
     }
 }
-#sun{
-    padding: 1rem;
-    font-size: 2rem;
-    color: var(--font-color);
-
-} 
-#sun:hover{
-    cursor: pointer;
-    color: var(--primary-color);
-
-}
-
 .enlaces{
     height: 100vh;
     width: 75vw;
@@ -139,7 +127,6 @@ header nav{
         }
     }
 }
- 
 .close{
     clip-path: circle(0% at 100% 0%);
 }
@@ -147,6 +134,15 @@ header nav{
     clip-path: circle(150% at 100% 0%);
 }
 /* DarkMode */
+#sun{
+    padding: 1rem;
+    font-size: 2rem;
+    color: var(--font-color);
+} 
+#sun:hover{
+    cursor: pointer;
+    color: var(--primary-color);
+}
 .light{
    --primary-color:#457eb0;
    --matisse-100: #e7eff7;
@@ -171,14 +167,17 @@ header nav{
     --matisse-700: #E4E5EB;
 } 
 
-.dark #git-img{
+.dark #github-img{
    filter: invert(100%);
 }
  
  /** Main style */
  main{
-     display: flex;
-     flex-direction: column;
+     /* display: flex; */
+     /* flex-direction: column; */
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+     gap: 1rem;
      justify-content: center; 
      align-items: center;
      color: var(--font-color);
@@ -188,13 +187,14 @@ header nav{
      display: grid;
      gap: 1rem;
      padding: 1rem;
-     margin: 1rem;
+     /* margin: 1rem; */
      width: 100%;
      text-align: center;
  }
  
  /*? Section home */
  section:first-child{
+    grid-column: span 2;
      display: flex;
      flex-direction: column;
      justify-content: space-between;
@@ -218,7 +218,7 @@ header nav{
              width: 100%;
              border-radius: 50%;
              border: 2px solid var(--primary-color);
-             box-shadow: 0px -3px 48px -8px var(--primary-color); 
+             /* box-shadow: 0px -3px 48px -8px var(--primary-color);  */
          }
      }
      /* enlaces */
@@ -256,6 +256,7 @@ header nav{
  }
  /*? Section about me */
  section:nth-child(2){
+    grid-column: span 2;
      background-color: var(--matisse-200);
      width: 100%;
      padding: 2rem;
@@ -268,13 +269,16 @@ header nav{
  }
  /*? Section skills */
  section:nth-child(3){
+    grid-column: span 2;
      & div div{
-         display: grid;
-         gap: 1rem;
+         display: flex;
+         gap: .1rem;
+         flex-flow: row wrap;
          margin-top: .5rem;
-         grid-template-columns: repeat(3,72px);
+         justify-content: center;
          & figure{
-             display: flex;
+             /* display: flex; */
+             width: 76px;
              justify-content: center;
              align-items: center;
              padding: .5rem;
@@ -283,6 +287,7 @@ header nav{
  }
  /*? Section projects */
  section:nth-child(4){
+    grid-column: span 2;
      background-color: var(--matisse-200);
      width: 100%;
      & > div{
@@ -339,6 +344,7 @@ header nav{
  }
  /*? Section contact */
  section:last-of-type{
+    grid-column: span 2;
      text-align: center;
      & a{
          font-style: italic;
@@ -372,7 +378,7 @@ header nav{
          & input, textarea{
              border: none;
              background-color: transparent;
-             font-family: 'Roboto', sans-serif;
+             font-family: 'Ubuntu', sans-serif;
              resize: none;
          }
          & input::placeholder, textarea::placeholder{
@@ -412,7 +418,7 @@ header nav{
  /*? Arrow return */
  main > div{
      position: fixed;
-     bottom: 1rem;
+     bottom: .5rem;
      right: 1rem;
      font-size: 2rem;
      & i:hover{
@@ -434,8 +440,13 @@ footer{
     section{
         text-align: start;
     }
+    /* Nav */
+    .enlaces {
+        min-height: 10vh;
+    }
     #sun{
         position: fixed;
+        font-size: 1.5rem;
         bottom: 0;
         z-index: 3;
         padding: 2vh;
@@ -462,25 +473,46 @@ footer{
     main div{
         display: block;
     }
+    /* section{
+        width: 70%;
+    } */
     section:first-child{
-        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
         & figure{
-            width: 50%;
+            width: 40%;
+        }
+        & div{
+            order: 1;
+            flex-grow: 2;
+        }
+        & figure{
+            order: 2;
         }
     }
+    section:nth-child(2){
+        grid-column: span 1;
+        height: 100%;
+    }
+
     section:nth-child(3){
+        grid-column: span 1;
         & div div{
-            grid-template-columns: repeat(3,90px);
+            justify-content: left;
         }
     }
     section:nth-child(4){
+        /* width: 90%; */
         grid-template-columns: repeat(2,49%);
+        justify-content: center;
         & h2{
             grid-column: span 2;
         }
     }
     section:last-of-type{
-        width: 70%;
+        width: 90%;
+        margin: auto;
         display: grid;
         grid-template-columns: repeat(2,1fr);
         margin-bottom: 1rem;
@@ -516,21 +548,10 @@ footer{
         width: 70%;
     }
     section:first-child{
-        width: 70%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        & figure{
-            width: 40%;
+        & h1 ,h2{
+            font-size: 2rem;
         }
-        & div{
-            order: 1;
-            flex-grow: 2;
-        }
-        & figure{
-            order: 2;
-        }
-    }
+    } 
     section:nth-child(2){
         justify-items: center;
         & h2, p{
