@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alba Vidal</title>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/79d8e2848d.js" crossorigin="anonymous"></script>
+    <!-- Icons -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-brands/css/uicons-brands.css'>
+    <!-- Estils -->
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body class="light" id="mode">   
+    <!-- Cabecera -->
+    <header>
+        <!-- Navegación -->
+        <nav>
+            <i class="fa-solid fa-moon" id="sun"></i>
+            <div class="icono" id="icono">
+                <i class="fa-solid fa-bars"></i> 
+            </div> 
+            <ul class="enlaces close" id="enlaces">
+                <li><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#about"><i class="fa-solid fa-user"></i>About me</a></li>
+                <li><a href="#skills"><i class="fa-solid fa-gear"></i>Skills</a></li>
+                <li><a href="#projects"><i class="fa-solid fa-folder-open"></i>Projects</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-paper-plane"></i></i>Contact</a></li>
+            </ul>
+            <p><small>Made with ❤️ by Alba Vidal &copy;</small></p>
+        </nav>
+        
+    </header>
+    <!-- Contenido principal -->
+    <main>
+        <section id="home">
+            <figure>
+                <img src="img/Foto-DNI.png" alt="foto">
+            </figure>
+            <div>
+                <h1>Hello there!<span>✌️</span></h1>
+                <h2>I'm <span>Alba Vidal</span></h2>
+                <p>Frontend Developer</p>
+                <ul>
+                    <li><a class="btn" href="pdf/cv-albavidal.pdf" download="cv-alba-vidal.pdf">Download CV
+                    </a></li>
+                    <!-- <li><a href="https://wa.me/+34660517673"><img src="img/whatsapp.svg" alt=""></a></li> -->
+                    <li><a href="https://github.com/AlbaVidalEsteve" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                    <!-- <li><a href="mailto:vidalba97@gmail.com" target="_blank"><img src="img/icons/envelope2.svg" alt=""></a></li> -->
+                    <li><a href="https://es.linkedin.com/in/alba-vidal-esteve-07b801184" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </section>
+        <section id="about">
+            <h2><i class="fa-solid fa-user"></i> About me</h2>
+            <p>I am a web application developer with experience in research and data analysis. I became acquainted with R during my research in biology, and since then, I have been learning and growing in programming. I have also completed a web development course. Currently, I focus on web development. </p>
+        </section>
+        <section id="skills">
+            <h2><i class="fa-solid fa-gear"></i> My skills</h2>
+            <div>
+                <h3>Frontend</h3>
+                <div>
+                    <figure><img src="img/css3.svg" alt=""></figure>
+                    <figure><img src="img/html5.svg" alt=""></figure>
+                    <figure><img src="img/file-type-js-official.svg" alt=""></figure>
+                </div>
+            </div>
+            <div>
+                <h3>Other skills</h3>
+                <div>
+                    <figure><img src="img/vscode-original.svg" alt=""></figure>
+                </div>
+            </div>
+            <div>
+                <h3>Currently learning...</h3>
+                <div>
+                    <figure><img src="img/github-wordmark.svg" alt="" id="git-img"></figure>
+                    <figure><img src="img/figma-original.svg" alt=""></figure>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <h2><i class="fa-solid fa-folder-open"></i> My projects </h2>
+            <div>
+                <figure><img src="img/project-portfoli.PNG" alt=""></figure>
+                <figcaption>Portfoli</figcaption>
+                <p><a href="https://github.com/AlbaVidalEsteve/Portfolio" target="_blank">Code<i class="fa-brands fa-github"></i></a></p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CCS</li>
+                    <li>JavaScript</li>
+                </ul>                
+            </div>
+            <div>
+                <figure><img src="img/project-netcontes.PNG" alt=""></figure>
+                <figcaption>NETContes Project</figcaption>
+                <p><a href="https://github.com/AlbaVidalEsteve/NETContes" target="_blank">Code<i class="fa-brands fa-github"></i></a></p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CCS</li>
+                </ul>
+                
+            </div>
+        </section>
+        <section id="contact">
+            <h2> <i class="fa-solid fa-paper-plane"></i> Contact me</h2>
+            <p class="description">I'm currently looking for new opportunities, my inbox is always open!</p>
+            <a href="mailto:vidalba97@gmail.com" class="btn">vidalba97@gmail.com</a>
+            <figure>
+                <img src="img/hand-coding.svg" alt="">
+            </figure>
+            <form action="#" method="post" name="enviament" id="enviament" autocomplete="off">
+                <fieldset>
+                    <legend>Dades bàsiques d'identificació personal</legend>
+                    <ul>
+                        <li>
+                            <label for="name"><i class="fa-solid fa-user"></i></label>
+                            <input type="text" name="name" id="name" required value="" placeholder="Name *">
+                        </li>
+                        <li>
+                            <label for="mail"><i class="fa-solid fa-at"></i></i></label>
+                            <input type="email" name="mail" id="mail" required value="" placeholder="Email *">
+                        </li>
+                        <li>
+                            <label for="message"><i class="fa-regular fa-message"></i></label>
+                            <textarea name="message" id="message" rows="10" placeholder="Message"></textarea>
+                        </li>
+                    </ul>
+                </fieldset>
+                <div>
+                    <input type="submit" value="Send">
+                    <!-- <input type="reset" value="Reset"> -->
+                </div>   
+            </form>
+        </section>
+        <!-- Arrow up -->
+        <div><a href="#home"><i class="fa-solid fa-caret-up"></i></a></div>
+    </main>
+    <!-- Pie de página -->
+    <footer>
+        <!-- <ul>
+            <li><a href="https://wa.me/+34660517673"><i class="fa-brands fa-whatsapp"></i></a></li>
+            <li><a href="https://github.com/AlbaVidalEsteve"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>   -->
+         <p><small>Made with ❤️ by Alba Vidal &copy;</small></p>
+         <!-- <p>vidalba97@gmail.com</p> -->
+    </footer>
+    <!-- Scripts -->
+    <script src="js/hamburger-script.js"></script>
+</body>
+</html>
