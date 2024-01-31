@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #457eb0;
+    --dark-background-color: #252525;
+    --dark-font-color: #E4E5EB;
+    --font-color: #2d2e33ff;
+    --bg-color: #f2f2f2ff;
+}
+
+body{
+    font:18px/1.5 'Ubuntu', sans-serif;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+
+
+/* General Presets */
+h1, h2, h3, h4{
+  font-family: 'Share Tech Mono', serif;
+}
+a{
+    color: var(--font-color);
+    text-decoration: none;
+}
+a:hover{
+    color: var(--primary-color);
+}
+
+figure{
+    width: 90%;
+    & img{
+        width: 100%;
+    }
+}
+li{
+    list-style-type: none;
+}
+
+/* Header */
+header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    & ul{
+        display: none;
+        flex-direction: column;
+        & li{
+            list-style: none;
+        }
+    }
+    & >p{
+        display: none;
+    }
+
+
+}
+
+section{
+    width: 100vw;
+    border: 2px solid #00f7ff;
+}
+
+/* Home */
+#home{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    & figure{
+        width: 90%;
+        & img{
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+    & div{ 
+        & h2 span{
+        color: var(--primary-color);
+        }
+        & ul{
+            display: flex;
+            flex-flow: row wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            & li a {
+                padding: 0.2rem;
+                border-radius: 5px;
+                color: var(--primary-color);
+            }
+            & li:hover{
+
+            }
+        }
+
+    }
+}
+
+
