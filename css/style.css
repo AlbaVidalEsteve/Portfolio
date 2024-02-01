@@ -308,10 +308,7 @@ text-align: center;
         font-weight: bold;
     }
 }
-#skills{
-    
-  
-}
+
 @keyframes slide{
     0%{transform: translateX(0);}
     8%{transform: translateX(0);}
@@ -610,7 +607,7 @@ footer{
     }
     #home{
         & h1 ,h2{
-            /* font-size: 2rem; */
+            font-size: 2rem;
         }
     } 
     #about{
@@ -689,7 +686,7 @@ footer{
             grid-template-columns: 220px 80px 80px;
             gap: 1rem;
             & li a i{
-                /* font-size: 5rem; */
+                font-size: 5rem;
             }
         }
     }
@@ -714,13 +711,13 @@ footer{
         padding: 1rem;
         gap: 1.5rem;
         & p a{
-            /* font-size: 2rem; */
+            font-size: 2rem;
             & i{
-                /* font-size: 2.5rem; */
+                font-size: 2.5rem;
             }
         }
         & ul li{
-            /* font-size: 2rem; */
+            font-size: 2rem;
         } 
     }
     #contact{
