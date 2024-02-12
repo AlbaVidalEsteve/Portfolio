@@ -69,22 +69,95 @@ body{
 
 /** Navigation style */
 header{
-    & p{
-        display: none;
-    }
-}
-
-header nav{
     position: fixed;
     top: 0;
     right: 0;
-    margin: 0 auto;
-    display: flex;
     width: 100%;
     justify-content: space-between;
-    border: 1px solid red;
+} 
+
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+  }
+/* The dropdown container */
+.dropdown {
+    justify-self: flex-end;
+    float: right;
+    overflow: hidden;
+}
+  /* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 1rem;
+    color: var(--font-color);
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
 }
 
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    color: var(--font-color);
+    padding: 1rem;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+/* Add a red background color to navbar links on hover */
+.dropdown:hover .dropbtn i{
+    color: var(--matisse-600);
+    transform: scale(1.5);
+    z-index: 5;
+    /* background-color: var(--matisse-600); */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100vh;
+    right: 0;
+    background-color: #ffffff80;
+    backdrop-filter: blur(10px);
+    min-width: 160px;
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: var(--font-color);
+    padding: 1rem;
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+    text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    color: var(--primary-color);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: flex;
+    top: 0;
+}
+
+/*
 .icono{
     position: fixed;
     top: .5rem;
@@ -107,7 +180,7 @@ header nav{
     height: 100vh;
     width: 75vw;
     position: fixed;
-    top: 0;
+    bottom: 0;
     right: 0;
     z-index: 1;
     transition: all 1.5s ease;  
@@ -141,14 +214,14 @@ header nav{
 }
 .open{
     clip-path: circle(150% at 100% 0%);
-}
+} */
 /* DarkMode */
 #sun{
     position: fixed;
-    top: .5rem;
-    left: .5rem;
-    /* padding: 1rem; */
-    font-size: 2rem;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    font-size: 1.2rem;
     color: var(--font-color);
 } 
 #sun:hover{
@@ -187,11 +260,11 @@ header nav{
 
 /** Main style */
 main{
-display: grid;
-grid-template-columns: 1fr;
-justify-items: center; 
-align-items: center;
-color: var(--font-color);
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center; 
+    align-items: center;
+    color: var(--font-color);
 }
 
 section{
@@ -265,7 +338,6 @@ text-align: center;
         }   
 }
 #about{
-    /* background-color: var(--matisse-200); */
     width: 100%;
     padding: 2rem;
     & h2, p{
@@ -502,8 +574,7 @@ footer{
 .git-btn:hover a{
     background-color: var(--font-color); 
     color: var(--bg-color);  
-}                  
-    
+}                   
 
 /** Media queries */
 @media only screen and (min-width: 768px){
@@ -511,35 +582,6 @@ footer{
         text-align: start;
         padding: auto 2rem;
     }
-    /* Nav */
-    
-    #sun{
-        position: fixed;
-        font-size: 1.5rem;
-        top: 95%;
-        left: .5rem;
-        z-index: 3;
-        /* padding: 2vh; */
-    }
-    .icono{
-        display: none;
-    }
-    .enlaces {
-        height: 9vh;
-        width: 100vw;
-        flex-direction: row;
-        align-items: center;
-        gap: 1rem;
-        /* background-color: var(--nav-tablet); */
-        backdrop-filter: blur(10px);
-    }
-    .close{
-        clip-path: circle(150% at 100% 0%);
-    }
-
-    /* main div{
-        display: block;
-    } */
     #home{
         display: grid;
         grid-template-columns: auto 35%;
@@ -559,9 +601,6 @@ footer{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         gap: 1rem;
-        & li{
-            /* width: 50%; */
-        }
     }
     #skills{
         & div div{
@@ -575,11 +614,6 @@ footer{
             grid-column: span 2;
             justify-self: left;
         }
-        /* & div:last-child{
-            grid-column: span 2;
-            width: 50%;
-            justify-self: center;
-        } */
     }
     #contact{
         width: 90%;
@@ -618,7 +652,6 @@ footer{
     :root{
         font-size: 18px;
     }
-
     section{
         width: 70%;
     }
@@ -665,9 +698,6 @@ footer{
 }
  
 @media only screen and (min-width: 2560px){
-    /* :root{
-        font-size: 22px;
-    } */
     body{
         line-height: 1.5;
     }
@@ -687,7 +717,6 @@ footer{
     }
     #sun{
         font-size: 3rem;
-        /* padding: 45px; */
     }
     .enlaces {
         gap: 2.5rem;
