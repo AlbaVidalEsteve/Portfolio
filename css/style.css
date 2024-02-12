@@ -129,7 +129,7 @@ header{
     position: absolute;
     height: 100vh;
     right: 0;
-    background-color: #ffffff80;
+    background-color: var(--nav-mobile);
     backdrop-filter: blur(10px);
     min-width: 160px;
     z-index: 1;
@@ -425,8 +425,8 @@ text-align: center;
     width: 100%;
     & > div{
         background-color: var(--bg-color);
-        /* padding: .5rem; */
         border-radius: 8px;
+        /* padding: 1rem; */
         display: flex;
         flex-direction: column;
         align-items: center;
