@@ -78,18 +78,21 @@ header nav{
     position: fixed;
     top: 0;
     right: 0;
-    width: 100vw;
     margin: 0 auto;
     display: flex;
+    width: 100%;
     justify-content: space-between;
+    border: 1px solid red;
 }
 
 .icono{
+    position: fixed;
+    top: .5rem;
+    right: .5rem;
     display: flex;
     justify-content: end;
     align-items: center;
     font-size: 2rem;
-    padding: 1rem;
     z-index: 2;
     & i{
         z-index: 2;
@@ -104,11 +107,11 @@ header nav{
     height: 100vh;
     width: 75vw;
     position: fixed;
-    bottom: 0;
+    top: 0;
     right: 0;
     z-index: 1;
     transition: all 1.5s ease;  
-    background-color: var(--nav-mobile);
+    background-color: #ffffffab;
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
@@ -141,7 +144,10 @@ header nav{
 }
 /* DarkMode */
 #sun{
-    padding: 1rem;
+    position: fixed;
+    top: .5rem;
+    left: .5rem;
+    /* padding: 1rem; */
     font-size: 2rem;
     color: var(--font-color);
 } 
@@ -359,27 +365,6 @@ text-align: center;
             aspect-ratio: 4/3;
             border-radius: 8px 8px 0 0;
         }
-        /* Boton code */
-        & p a{
-            justify-self: center;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: .4rem;
-            padding: .2rem .5rem;
-            border-radius: 5px;
-            background-color: var(--bg-color); 
-            color: var(--font-color);  
-            border: 1px solid var(--font-color);
-            & i{
-                font-size: 1.2rem;
-            }          
-        }
-        & p:hover a{
-            background-color: var(--font-color); 
-            color: var(--bg-color);                    
-        }
         /* Skills */
         & ul{
             display: flex;
@@ -473,8 +458,8 @@ form div{
 /*? Arrow return */
 main > div{
     position: fixed;
-    bottom: .5rem;
-    right: 1rem;
+    bottom: 0;
+    right: .9rem;
     font-size: 2rem;
     & i:hover{
         color: var(--primary-color);
@@ -483,13 +468,43 @@ main > div{
  
 /** Footer style */
 footer{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
     justify-content: center;
+
     align-items: center;
     color: var(--font-color);
     padding-bottom: 3rem;
+    & p{
+        display: flex;
+        justify-content: center;
+    }
 }
- 
+.git-btn a{
+    width: min-content;
+    justify-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    padding: .2rem .5rem;
+    border-radius: 5px;
+    background-color: var(--bg-color); 
+    color: var(--font-color);  
+    border: 1px solid var(--font-color);
+    & i{
+        font-size: 1.2rem;
+    } 
+            
+}
+.git-btn:hover a{
+    background-color: var(--font-color); 
+    color: var(--bg-color);  
+}                  
+    
+
 /** Media queries */
 @media only screen and (min-width: 768px){
     section{
@@ -497,15 +512,14 @@ footer{
         padding: auto 2rem;
     }
     /* Nav */
-    .enlaces {
-        min-height: 10vh;
-    }
+    
     #sun{
         position: fixed;
         font-size: 1.5rem;
-        bottom: 0;
+        top: 95%;
+        left: .5rem;
         z-index: 3;
-        padding: 2vh;
+        /* padding: 2vh; */
     }
     .icono{
         display: none;
@@ -516,12 +530,13 @@ footer{
         flex-direction: row;
         align-items: center;
         gap: 1rem;
-        background-color: var(--nav-tablet);
+        /* background-color: var(--nav-tablet); */
         backdrop-filter: blur(10px);
     }
     .close{
         clip-path: circle(150% at 100% 0%);
     }
+
     /* main div{
         display: block;
     } */
@@ -541,9 +556,11 @@ footer{
         }
     }
     #formation ul{
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
         & li{
-            width: 50%;
+            /* width: 50%; */
         }
     }
     #skills{
@@ -558,11 +575,11 @@ footer{
             grid-column: span 2;
             justify-self: left;
         }
-        & div:last-child{
+        /* & div:last-child{
             grid-column: span 2;
             width: 50%;
             justify-self: center;
-        }
+        } */
     }
     #contact{
         width: 90%;
@@ -664,13 +681,13 @@ footer{
         font-size: 2rem;
     }
     div i{
-        bottom: 45px;
-        right: 45px;
+        bottom: .5rem;
+        right: .5rem;
         font-size: 3rem;
     }
     #sun{
         font-size: 3rem;
-        padding: 45px;
+        /* padding: 45px; */
     }
     .enlaces {
         gap: 2.5rem;
